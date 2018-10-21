@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bookings
+  labels:
+    language: go
+    env: test
+spec:
+  containers:
+    - name: bookings
+      image: thdmsdia/thesis:bookings
+      command: [ "/bin/bash", "-c", "--" ]
+      args: [ "while true; do sleep 30; done;" ]
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: movies
+  labels:
+    language: go
+    env: test
+spec:
+  containers:
+    - name: movies
+      image: thdmsdia/thesis:movies
+      command: [ "/bin/bash", "-c", "--" ]
+      args: [ "while true; do sleep 30; done;" ]
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: showtimes
+  labels:
+    language: go
+    env: test
+spec:
+  containers:
+    - name: showtimes
+      image: thdmsdia/thesis:showtimes
+      command: [ "/bin/bash", "-c", "--" ]
+      args: [ "while true; do sleep 30; done;" ]
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 8080
+          protocol: TCP
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: users
+  labels:
+    language: go
+    env: test
+spec:
+  containers:
+    - name: users
+      image: thdmsdia/thesis:users
+      command: [ "/bin/bash", "-c", "--" ]
+      args: [ "while true; do sleep 30; done;" ]
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 8080
+          protocol: TCP

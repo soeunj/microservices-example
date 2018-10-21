@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/mmorejon/cinema/bookings/common"
-	"github.com/mmorejon/cinema/bookings/routers"
+	"github.com/soeunj/microservices-example/bookings/common"
+	"github.com/soeunj/microservices-example/bookings/routers"
 )
 
 // Entry point for the program

@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/mmorejon/cinema/bookings/models"
+	"github.com/soeunj/microservices-example/bookings/models"
 )
 
 type (

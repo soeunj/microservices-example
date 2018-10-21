@@ -1,21 +1,19 @@
 # golang image where workspace (GOPATH) configured at /go.
-FROM golang:1.6
+FROM golang:1.10
 
 # Install dependencies
 RUN go get gopkg.in/mgo.v2
 RUN go get github.com/gorilla/mux
 
-# copy the local package files to the container workspace
-ADD . /go/src/github.com/mmorejon/cinema/users
-
 # Setting up working directory
-WORKDIR /go/src/github.com/mmorejon/cinema/users
+COPY . /go/src/github.com/soeunj/microservices-example/users/
 
 # Build the users command inside the container.
-RUN go install github.com/mmorejon/cinema/users
+RUN go install github.com/soeunj/microservices-example/users/
 
 # Run the users microservice when the container starts.
-ENTRYPOINT /go/bin/users
+ENTRYPOINT microservices-example
 
 # Service listens on port 8080.
+ENV PORT 8080
 EXPOSE 8080

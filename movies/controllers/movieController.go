@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/mmorejon/cinema/movies/common"
-	"github.com/mmorejon/cinema/movies/data"
+	"github.com/soeunj/microservices-example/movies/common"
+	"github.com/soeunj/microservices-example/movies/data"
 	"gopkg.in/mgo.v2"
 )
 

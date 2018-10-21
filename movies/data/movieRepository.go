@@ -3,7 +3,7 @@ package data
 import (
 	"time"
 
-	"github.com/mmorejon/cinema/movies/models"
+	"github.com/soeunj/microservices-example/movies/models"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )
